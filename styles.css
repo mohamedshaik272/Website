@@ -16,7 +16,7 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    padding-top: 100px; /* To account for fixed navbar */
+    padding-top: 100px; 
 }
 
 header {
@@ -31,7 +31,7 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: transparent;
+    background-color: #121212;
     border: 1px solid white;
     width: auto;
 }
@@ -105,6 +105,7 @@ p {
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .skill {
