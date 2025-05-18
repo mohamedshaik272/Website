@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Shaik - Photography</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Aleo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">about</a>
+            <a href="experience.html">experience</a>
+             <div class="nav-name">
+                <div>MS</div>
+            </div>
+            <a href="projects.html">projects</a>
+            <a href="photography.html" class="active">photography</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <section id="photography" class="section">
+            <h1>Photography</h1>
+            
+            <div class="photography-grid">
+                <!-- Row 1 -->
+                <div class="photo-item">
+                    <img src="images/image1.jpg" alt="Raccoon on grass" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image2.jpg" alt="Burj Khalifa in Dubai" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image3.jpg" alt="Dubai skyline" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image4.jpg" alt="Market hallway" onclick="openModal(this.src)">
+                </div>
+                
+                <!-- Row 2 -->
+                <div class="photo-item">
+                    <img src="images/image5.jpg" alt="Colorful spices" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image6.jpg" alt="Cat portrait" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image7.jpg" alt="Beach volleyball" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image8.jpg" alt="Palm trees" onclick="openModal(this.src)">
+                </div>
+                
+                <!-- Row 3 -->
+                <div class="photo-item">
+                    <img src="images/image9.jpg" alt="Urban street scene" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image10.jpg" alt="Pizza" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image11.jpg" alt="Cat sleeping" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image12.jpg" alt="Interior of a mosque" onclick="openModal(this.src)">
+                </div>
+                
+                <!-- Row 4 -->
+                <div class="photo-item">
+                    <img src="images/image13.jpg" alt="Louvre Abu Dhabi dome" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image14.jpg" alt="Red architectural interior" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image15.jpg" alt="Bridge over water" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image16.jpg" alt="City skyline at night" onclick="openModal(this.src)">
+                </div>
+                
+                <!-- Row 5 -->
+                <div class="photo-item">
+                    <img src="images/image17.jpg" alt="Birds in flight" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image18.jpg" alt="Light show" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image19.jpg" alt="Vintage car" onclick="openModal(this.src)">
+                </div>
+                <div class="photo-item">
+                    <img src="images/image20.jpg" alt="Airplane in flight" onclick="openModal(this.src)">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal for full-size image view -->
+        <div id="imageModal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="fullImage">
+        </div>
+        
+        <footer>
+            &copy; powered by caffeine and stack overflow
+        </footer>
+    </div>
+
+    <script>
+        // Modal functionality
+        function openModal(imgSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('fullImage');
+            modal.style.display = "block";
+            modalImg.src = imgSrc;
+            
+            // Prevent scrolling when modal is open
+            document.body.style.overflow = "hidden";
+        }
+        
+        function closeModal() {
+            document.getElementById('imageModal').style.display = "none";
+            
+            // Re-enable scrolling
+            document.body.style.overflow = "auto";
+        }
+
+        // Close modal when clicking outside the image
+        window.onclick = function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
