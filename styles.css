@@ -16,25 +16,25 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-    padding-top: 80px;
+    padding-top: 100px; /* To account for fixed navbar */
 }
 
 header {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #121212;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
-    border-bottom: 1px solid #333;
+    background-color: transparent;
 }
 
 nav {
-    max-width: 1000px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    background-color: #121212;
+    border: 1px solid white;
+    border-radius: 3px;
 }
 
 nav a {
@@ -179,6 +179,10 @@ footer {
     .exp-header, .proj-header {
         flex-direction: column;
         gap: 5px;
+    }
+    
+    header {
+        width: 90%;
     }
     
     nav {
