@@ -31,18 +31,20 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 15px;
     background-color: #121212;
     border: 1px solid white;
     border-radius: 3px;
+    width: 300px; /* Reduced size */
 }
 
 nav a {
     color: #9e9e9e;
     text-decoration: none;
-    padding: 10px 15px;
+    padding: 8px 12px;
     transition: all 0.3s;
     border-radius: 3px;
+    font-size: 0.9rem;
 }
 
 nav a:hover {
@@ -181,13 +183,15 @@ footer {
         gap: 5px;
     }
     
-    header {
-        width: 90%;
-    }
-    
     nav {
+        width: 250px;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 5px;
+    }
+    
+    nav a {
+        font-size: 0.8rem;
+        padding: 6px 10px;
     }
 }
