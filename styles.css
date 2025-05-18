@@ -332,3 +332,54 @@ footer {
     font-size: 1.7rem;
   }
 }
+
+.proj-links {
+  display: flex;
+  gap: 12px;
+}
+
+.proj-links a {
+  color: #b3b31c;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.proj-links a:hover {
+  text-decoration: underline;
+}
+
+.link-github::before {
+  content: "⌘";
+  margin-right: 4px;
+  font-size: 0.9em;
+}
+
+.link-devpost::before {
+  content: "⚙";
+  margin-right: 4px;
+  font-size: 0.9em;
+}
+
+.link-linkedin::before {
+  content: "⚬";
+  margin-right: 4px;
+  font-size: 0.9em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .proj-links {
+    margin-top: 5px;
+  }
+  
+  .proj-links a {
+    font-size: 0.85rem;
+  }
+}
+.link-slides::before {
+  content: "▶";
+  margin-right: 4px;
+  font-size: 0.9em;
+}
