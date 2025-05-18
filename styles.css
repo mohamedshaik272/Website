@@ -27,8 +27,6 @@ header {
   transform: translateX(-50%);
   z-index: 1000;
   background-color: transparent;
-  width: 100%;
-  max-width: 1000px;
 }
 
 nav {
@@ -38,7 +36,6 @@ nav {
   background-color: #121212;
   border: 1px solid white;
   width: auto;
-  margin: 0 20px;
 }
 
 nav a {
@@ -110,17 +107,6 @@ p {
 
 .section a:hover, #about a:hover, .contact-info a:hover, .proj-github a:hover {
   text-decoration: underline;
-}
-
-/* Resume link */
-.resume-link {
-  display: inline-flex;
-  align-items: center;
-}
-
-.resume-link::before {
-  margin-right: 4px;
-  font-size: 1.1em;
 }
 
 /* Contact & Skills */
@@ -305,11 +291,9 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    margin: 0;
     border-left: none;
     border-right: none;
     border-top: none;
-    border-bottom: 1px solid white;
   }
   
   .nav-name {
@@ -346,10 +330,5 @@ footer {
   
   h2 {
     font-size: 1.7rem;
-  }
-  
-  .contact-info {
-    flex-direction: column;
-    gap: 10px;
   }
 }
