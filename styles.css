@@ -14,6 +14,10 @@
   --accent-color: #f2be63;    /* Links, highlights, accents */
 }
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   font-family: 'Nanum Gothic Coding', monospace;
   background-color: var(--bg-color);
@@ -161,7 +165,6 @@ nav a.active {
   left: -6px;
   top: 10px;
 }
-
 
 .exp-header, .proj-header {
   display: flex;
@@ -313,6 +316,108 @@ footer {
   text-align: center;
   color: var(--text-muted);
   border-top: 1px solid var(--bg-secondary);
+}
+
+/* Text 3D Effect */
+.text-3d-effect {
+  position: relative;
+  cursor: pointer;
+  transition: .6s;
+  color: transparent; 
+}
+
+.text-3d-effect:before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--text-light); 
+  z-index: -1;
+  transition: .6s;
+  text-shadow:
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px,
+   0px 0px;
+  -webkit-mask: repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+          mask: repeating-linear-gradient(45deg, transparent 0 3px, rgba(0,0,0,0.5) 0 6px);
+}
+
+.text-3d-effect:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--text-light); 
+}
+
+.text-3d-effect:hover {
+  transform: translate(-5px, -5px);
+}  
+
+.text-3d-effect:hover:before {
+  text-shadow:
+   1px 1px,
+   2px 2px,
+   3px 3px,
+   4px 4px,
+   5px 5px,
+   6px 6px,
+   7px 7px,
+   8px 8px,
+   9px 9px,
+   10px 10px;
+}
+
+/* Split Effect */
+.split-effect {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: 'Aleo', serif;
+    color: transparent;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.split-effect:before, .split-effect:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: .3s;
+    font-weight: bold;
+}
+
+.split-effect:before {
+    color: var(--accent-color);
+    -webkit-clip-path: polygon(55% 0, 0 0, 0 100%, 35% 100%);
+    clip-path: polygon(55% 0, 0 0, 0 100%, 35% 100%);
+}
+
+.split-effect:after {
+    color: var(--text-light);
+    -webkit-clip-path: polygon(55% 0, 100% 0, 100% 100%, 35% 100%);
+    clip-path: polygon(55% 0, 100% 0, 100% 100%, 35% 100%);
+}
+
+.split-effect:hover:before {
+    top: -3px;
+    left: -5px;
+    transform: rotate(-5deg);
+}
+
+.split-effect:hover:after {
+    top: 3px;
+    left: 5px;
+    transform: rotate(5deg);
 }
 
 /* Responsive layouts */
