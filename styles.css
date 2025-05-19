@@ -29,7 +29,7 @@ h1, h2, h3 {
 
 h1 {
   font-size: 2.5rem;
-  border-bottom: 3px solid #b3b31c;
+  border-bottom: 3px solid #f2be63;
   padding-bottom: 10px;
   display: inline-block;
 }
@@ -37,7 +37,7 @@ h1 {
 h2 {
   font-size: 2rem;
   margin-top: 40px;
-  border-left: 5px solid #b3b31c;
+  border-left: 5px solid #f2be63;
   padding-left: 15px;
 }
 
@@ -47,7 +47,7 @@ p {
 
 /* Links styling */
 a {
-  color: #b3b31c;
+  color: #f2be63;
   text-decoration: none;
   transition: all 0.2s;
 }
@@ -76,7 +76,7 @@ nav {
 }
 
 nav a {
-  color: #b3b31c;
+  color: #f2be63;
   text-decoration: none;
   padding: 12px 20px;
   transition: all 0.3s;
@@ -147,7 +147,7 @@ nav a.active {
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #b3b31c;
+  background-color: #f2be63;
   border-radius: 50%;
   left: -6px;
   top: 10px;
@@ -167,11 +167,11 @@ nav a.active {
 }
 
 .exp-company, .exp-location, .exp-date {
-  color: #b3b31c;
+  color: #f2be63;
 }
 
 .award {
-  color: #b3b31c;
+  color: #f2be63;
   font-style: italic;
   margin-bottom: 10px;
 }
@@ -223,7 +223,7 @@ li {
 }
 
 li::marker {
-  color: #b3b31c;
+  color: #f2be63;
 }
 
 /* Photography Grid */
@@ -292,7 +292,7 @@ li::marker {
 
 .close:hover, 
 .close:focus {
-  color: #b3b31c;
+  color: #f2be63;
   text-decoration: none;
 }
 
